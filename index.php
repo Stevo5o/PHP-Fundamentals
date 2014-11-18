@@ -15,9 +15,10 @@ $fav_sites = [
    <body>
       <h1>My Sites</h1>   
       <?php
-      foreach ($fav_sites as $site => $url) {
-         echo "<li><a href='$url' target=_blank>" . ucwords($site) . "</a></li>";
-      }
-      ?> 
+      foreach ($fav_sites as $site => $url) : ?>
+         <li>
+            <a href="<?php echo $url; ?>"target=_blank><?php echo ucwords($site); ?></a>
+                </li>
+                <?php endforeach ?>
    </body>
 </html>
