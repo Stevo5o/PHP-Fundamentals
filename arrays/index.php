@@ -1,8 +1,8 @@
 <?php
 $fav_sites = [
     'stephen o\'Connor' => 'http://stephenoconnor.azurewebsites.net',
-    'imdb' => 'http://imdb.com',
-    'metacritic' => 'http://metacritic.com'
+    'imdb'              => 'http://imdb.com',
+    'metacritic'        => 'http://metacritic.com'
 ];
 
 $months = ['jan', 'feb', 'mar', 'april', 'may'];
