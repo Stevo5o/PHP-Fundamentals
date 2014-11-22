@@ -6,6 +6,12 @@ $fav_sites = [
     'write/test PHP'    => 'http://writecodeonline.com/php/'
 ];
 
+$fav_sitesOldArray = array(
+   'stephen o\'Connor' => 'http://stephenoconnor.azurewebsites.net',
+    'imdb'              => 'http://imdb.com',
+    'metacritic'        => 'http://metacritic.com',
+    'write/test PHP'    => 'http://writecodeonline.com/php/');
+
 $months = ['jan', 'feb', 'mar', 'april', 'may'];
 
 $months[] = 'june'; // array_push
@@ -31,7 +37,9 @@ $month3Char = array_filter($months, function($item) { return strlen($item) == 3;
       <title>Arrays</title>
    </head>
    <body>
-      <h2>Arrays</h2>   
+      <h2>Arrays</h2> 
+      
+      <!-- new way php 5 -->
          <?php foreach ($fav_sites as $site => $url) : ?>
          <li>
             <a href="<?= $url; ?>"target=_blank><?= ucwords($site); ?></a> <!-- new echo assoc --> 
@@ -39,7 +47,14 @@ $month3Char = array_filter($months, function($item) { return strlen($item) == 3;
          <?php
       		endforeach;
       echo "<br />";
-
+      
+      // standard way php 5 
+      foreach ($fav_sitesOldArray as $site => $url) {
+         echo "<li><a href=$url>" . ucwords($site) . "</a>"
+         . "</li>"; 
+      }
+     echo "<br />";
+     
       // echo first second and last months
       echo "Months in months array <br /> First: " . reset($months);
       echo "<br />";
