@@ -42,6 +42,7 @@ echo '</pre>';
 // cast array to an object
 var_dump((object) $person2);
 
+// cast array to an object
 echo '<pre>';
 print_r((object) $person2);
 echo '</pre>';

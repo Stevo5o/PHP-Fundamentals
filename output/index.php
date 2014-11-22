@@ -1,5 +1,7 @@
 <?php 
 
+// different ways to output information
+
 $name = "Ste";
 $houseNumber = 10;
 

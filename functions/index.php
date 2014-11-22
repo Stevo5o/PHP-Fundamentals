@@ -1,5 +1,7 @@
 <?php
 
+// basic PHP OOD
+
 function say_hello($name = 'buddy') {
 	return "Hi, there $name.";
 }
