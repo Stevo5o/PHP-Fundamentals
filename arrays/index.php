@@ -2,7 +2,8 @@
 $fav_sites = [
     'stephen o\'Connor' => 'http://stephenoconnor.azurewebsites.net',
     'imdb'              => 'http://imdb.com',
-    'metacritic'        => 'http://metacritic.com'
+    'metacritic'        => 'http://metacritic.com',
+    'write/test PHP'    => 'http://writecodeonline.com/php/'
 ];
 
 $months = ['jan', 'feb', 'mar', 'april', 'may'];
