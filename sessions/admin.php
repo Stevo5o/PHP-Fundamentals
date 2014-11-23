@@ -17,7 +17,7 @@ if ( !is_logged_in()) {
       <title>Admin Page</title>
    </head>
    <body>
-      <h1>Hello,<?php echo $_SESSION['username']; ?></h1>
+      <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
       <a href="logout.php">Logout</a>
    </body>
 </html>
