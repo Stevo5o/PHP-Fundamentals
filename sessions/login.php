@@ -1,22 +1,21 @@
 <?php
-session_start();
 
-define('USERNAME', 'stephen.oconnor');
-define('PASSWORD', '1234');
+include 'config.php';
+include 'functions.php';
+
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    $username = $_POST['username'];
    $password = $_POST['password'];
 
-   // validate 
-   if ($username === USERNAME && $password === PASSWORD) {
+   if(validate_user_creds($username, $password)) {
       // credentials are correct
-      
       // login & set session
       $_SESSION['username'] = $username;
       header('location: admin.php');
    } else {
-      $status = "Incorrect Login";
+      $status = "Incorrect Login.";
    }
 }
 ?>
