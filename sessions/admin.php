@@ -1,10 +1,13 @@
 <?php
+
+include 'functions.php';
 session_start();
 
-if (!isset($_SESSION['username'])) {
+if ( !is_logged_in()) {
    header('Location: login.php');
    die();
 }
+
 ?>
 <!DOCTYPE html>
 <!-- @author Stephen O'Connor -->

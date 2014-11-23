@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    // validate 
    if ($username === USERNAME && $password === PASSWORD) {
       // credentials are correct
+      
       // login & set session
       $_SESSION['username'] = $username;
       header('location: admin.php');
