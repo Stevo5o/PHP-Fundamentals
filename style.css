@@ -1,4 +1,14 @@
-  * {
-      	font-size: 100%;
-      	font-family: Ubuntu;
-      }
+* {
+   font-size: 100%;
+   font-family: Ubuntu;
+}
+
+#content {border:1px solid blue;height:16em; width:600px; margin: 0 auto; padding:.3%;}
+#contentPost {border:1px solid blue; width:25%; margin: 0 auto; padding:.3%;}
+.panel{height:100%;width:28%;float:left; background-color: silver;margin-left:1%;}
+#panel{background-color: silver;text-align: center;}
+form { height:100%;width:40%; background-color: #e6bfd9;float:left;margin-left:1%;}
+form ul { margin: 0; padding: 2%}
+form li { list-style: none; margin-bottom: .5em;}
+#message, #email, #name{width:97%}
+h1 {width:600px; margin: 0 auto;text-align: center;padding:.3%; background-color: gold; border:1px solid blue;}
