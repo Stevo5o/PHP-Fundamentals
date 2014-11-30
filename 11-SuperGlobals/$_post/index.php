@@ -23,7 +23,7 @@
       <article class="panel">
          	<header></header>
          </article>            
-         <form action="post.php" method="post">
+         <form id="formContact" action="post.php" method="post">
             <ul>
                <li>
                   <label for="name">Name: </label>
