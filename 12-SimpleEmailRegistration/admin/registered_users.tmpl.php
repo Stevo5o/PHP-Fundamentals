@@ -3,10 +3,11 @@
 <html>
    <head>
       <meta charset="UTF-8">
-      <title></title>
-      <link href="../style2.css" rel="stylesheet" type="text/css"/>
+      <title></title>     
+      <link href="../../style2.css" rel="stylesheet" type="text/css"/>
    </head>
    <body>
+      <div id ="contentMail">
       <h1>Lads on my Mailing List</h1>
       <?php
       if ($registered_users) {
@@ -18,5 +19,6 @@
          echo '<li>No registered Members.</li>';
       }      
       ?>
+      </div>
    </body>
 </html>
