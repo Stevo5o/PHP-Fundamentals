@@ -5,14 +5,11 @@
       <meta charset="UTF-8">
       <title></title>
       <link href="../style.css" rel="stylesheet" type="text/css"/>
-      <style>
-         li { list-style: none; margin:4px; }
-         .notice {color: red; font-style: italic;}
-      </style>
    </head>
    <body>
+      <div id ="contentMail">
       <h1>Join the mailing list</h1>
-      <form action="" method="post">
+      <form id="formMailing" action="" method="post">
          <?php
          if (isset($status)) : ?>
          <p class="notice"><?php echo $status; ?></p>
@@ -27,9 +24,10 @@
                <input type="text" name="email" value="<?php echo old('email'); ?>">
             </li>
             <li>
-               <input type="submit" value="Sign up!">
+               <input type="submit" name="submitButton" value="Sign up!">
             </li>
          </ul>         
       </form>
+      </div>
    </body>
 </html>
