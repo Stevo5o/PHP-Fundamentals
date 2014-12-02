@@ -1,14 +1,3 @@
-<?php
-// if (!empty($_POST)) {
-// 	print_r($_POST);
-// }
-
-//if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//   if ( mail('stevo.joc@gmail.com', 'New Website Message', htmlspecialchars($_POST['message']))) {
-//   	$status = "Thank you for your message";
-//   }
-//}
-?>
 <!DOCTYPE html>
 <!-- @author Stephen O'Connor -->
 <html>
@@ -45,9 +34,6 @@
         	 <article class="panel">
          	<header></header>
          </article>
-         <?php if (isset($tatus)) {
-         	echo "$status";
-         }?>
       </div>
 <?php
 // put your code here

@@ -9,8 +9,7 @@
    <body>  
       <div id="contentPost"> 
       <article id="panel">
-         	<header></header>
-          
+         	<header></header>          
       <?= "USERNAME: ",        
       filter_input(INPUT_POST, 'name'),      
       "<br />",
@@ -21,7 +20,7 @@
       filter_input(INPUT_POST, 'message');
       ?>
       </article>
-      <script>
+         <script type="text/javascript">
          alert(
               "<?= "USERNAME: ",        
       filter_input(INPUT_POST, 'name'),      
@@ -33,8 +32,6 @@
       filter_input(INPUT_POST, 'message');
       ?>"
                 );
-
       </script>
-
    </body>
 </html>
