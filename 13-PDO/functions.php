@@ -1,4 +1,6 @@
-<?php namespace Blog\DB;
+<?php 
+
+namespace Blog\DB;
 
 require 'config.php';
 

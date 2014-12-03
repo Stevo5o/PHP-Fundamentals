@@ -21,12 +21,13 @@ function connect($config) {
 function query($query, $bindings, $conn) {
    $stmt = $conn->prepare($query);
    $stmt->execute($bindings);
-   return $stmt;
+   
+   return ($stmt->rowCount() > 0) ? $stmt : false;
 }
 
 function get($tableName, $conn, $limit = 10) {
    try {
-      $result = $conn->query("SELECT * FROM $tableName LIMIT $limit");
+      $result = $conn->query("SELECT * FROM $tableName ORDER BY post_id DESC LIMIT $limit");
 
       return ($result->rowCount() > 0) ? $result : false;
    } catch (PDOException $e) {
@@ -42,7 +43,7 @@ function get_by_id($post_id, $conn) {
       $conn
       ); 
      
-      return $query->fetchAll();
+     if($query) { return $query->fetchAll(); }
    } catch (PDOException $e) {
       echo 'ERROR: ' . $e->getMessage();
    }
