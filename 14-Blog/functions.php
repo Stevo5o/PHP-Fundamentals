@@ -2,7 +2,7 @@
 
 require 'config.php';
 
-// PDO connect('localhost', 'username', 'password');
+# mysql_connect('localhost', 'username', 'password');
 
 function connect($config) {
    try {
@@ -23,9 +23,9 @@ function query($query, $bindings, $conn)
 	$stmt->fetchAll();
 }
 
-function get($tableName, $conn) {
+function get($tableName, $conn, $limit = 10) {
    try {
-      $result = $conn->query("SELECT * FROM $tableName");
+      $result = $conn->query("SELECT * FROM $tableName LIMIT $limit");
 
       return ($result->rowCount() > 0)
       ? $result
