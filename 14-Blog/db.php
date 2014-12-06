@@ -35,6 +35,7 @@ function get($tableName, $conn, $limit = 10) {
    }
 }
 
+// get a post by id
 function get_by_id($post_id, $conn) {
    try {
      $query = query(

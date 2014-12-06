@@ -14,6 +14,6 @@ use Blog\DB; // namespace
 $posts = DB\get('posts', $conn);
 
 view('index', array(
-	'posts' => $posts
+	'posts' => $posts,
+   'name' => 'SteJ'
 	));
-?>

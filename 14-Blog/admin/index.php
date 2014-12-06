@@ -1,9 +1,7 @@
 <?php
 
 /*
- * 
  * Admin Section
- * 
  */
 
 require '../blog.php';
