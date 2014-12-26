@@ -51,3 +51,23 @@ $names = array_pluck2('name', $people);
 	foreach($names as $name) {
 		echo "$name\n";
 	}
+   
+   // common functions
+   echo '<br>';
+   $phrase = 'I like to eat apples';
+   $phrase = str_replace('apples', 'oranges', $phrase);
+   echo $phrase;
+   
+   echo '<br>';
+   $name_array = ['Brad', 'Bob', 'Mike', 'Sarah', 'Michelle'];
+   print_r($name_array);
+   echo'<br>';
+   $name_array = implode('<br>', $name_array);
+   echo $name_array;
+   
+   echo '<br>';
+   $car_string = 'Toyota,Ford,nissan,Kia,Mazda';
+   $car_string = explode(',', $car_string);
+   print_r($car_string);   
+   echo 'How many cars: '. count($car_string);
+   
