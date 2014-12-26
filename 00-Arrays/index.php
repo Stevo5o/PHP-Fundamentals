@@ -42,7 +42,7 @@ $month3Char = array_filter($months, function($item) { return strlen($item) == 3;
       <!-- new way php 5 -->
          <?php foreach ($fav_sites as $site => $url) : ?>
          <li>
-            <a href="<?= $url; ?>"target=_blank><?= ucwords($site); ?></a> <!-- new echo assoc --> 
+            <a href="<?= $url; ?>" target=_blank><?= ucwords($site); ?></a> <!-- new echo assoc --> 
          </li>
          <?php
       		endforeach;
@@ -84,7 +84,10 @@ $month3Char = array_filter($months, function($item) { return strlen($item) == 3;
       echo "<pre>"; 
       echo "Filter months with only <b>3 chars </b>";     
       print_r($month3Char);    
-      echo '</pre>';           
+      echo '</pre>'; 
+      $h = 'Hello'; 
+              $w = 'World';
+              echo "$h $w";
       ?>
    </body>
 </html>
