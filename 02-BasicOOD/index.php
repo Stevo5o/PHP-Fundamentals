@@ -1,21 +1,16 @@
 <?php
 
-class Person {
+include 'classes/Car.php';
+include 'classes/Person.php';
 
-   public $name;
-   public $job;
+// create a new car 
+$car1 = new Car('Honda', 'Accord', 'Red');
+// $car1->setMake('Toyota');
+echo $car1->getMake();
+echo'<br>';
+echo $car1->start();
 
-   public function __construct($name, $job) {
-      $this->name = $name;
-      $this->job = $job;
-   }
-
-   public function communicate($style = 'voice') {
-      return 'communicating ' . $style;
-   }
-
-}
-
+// create a new person
 $p = new Person('John', 'Teacher');
 var_dump($p);
 echo $p->communicate('telepathy');
@@ -56,3 +51,4 @@ echo "<br />";
 
 // cast string to interger
 echo gettype((int) '5');
+
