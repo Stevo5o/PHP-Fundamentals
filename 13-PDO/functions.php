@@ -36,3 +36,7 @@ function get($tableName, $conn) {
       echo 'ERROR: ' . $e->getMessage();
    }
 }
+
+function insert() {
+   
+}
