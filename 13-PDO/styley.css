@@ -2,6 +2,12 @@
     Created on : 27-Dec-2014, 08:54:48
     Author     : Stephen
 */
-
+*{
+   font-family: source code pro;
+}
+label{font-size: 1em;padding-left: 10px;display:inline-block;width:110px;}
 ul{display:inline;}
 li{display: block;padding-bottom: 4px;}
+main{margin:auto;width:600px;}
+#button{float:right;padding:10px;}
+form{width:305px;border:dotted black 1px;overflow:hidden;}

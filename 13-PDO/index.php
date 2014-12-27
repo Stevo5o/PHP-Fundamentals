@@ -22,33 +22,39 @@ if ($conn) {
       <title></title>
    </head>
    <body>
-      <?php
-      if ($users) {
-         foreach ($users as $user) {
-            echo "<li>{$user['first_name']}</li>";
-         }
-      } else {
-         echo 'no rows';
-      }
-      ?>
-      <form method="post" action="process.php">
-         <ul>
-            <li>
-               <label>First Name: </label>
-               <input type="text" name="fname">
-            </li>
-            <li>
-               <label>Last Name: </label>
-               <input type="text" name="lname">
-            </li>
-            <li>
-               <label>Email: </label>
-               <input type="email" name="email">
-            </li>
-            <li>
-               <input type="submit" name="submit">
-            </li>
-         </ul>
-      </form>
+      <main>
+         <div class="form">
+            <?php
+            if ($users) {
+               foreach ($users as $user) {
+                  echo "<li>{$user['first_name']}</li>";
+               }
+            } else {
+               echo 'no rows';
+            }
+
+            //   $conn->query("INSERT INTO users (first_name)VALUES('fran')");
+            ?>
+            <form method="post" action="process.php">
+               <ul>
+                  <li>
+                     <label>First Name: </label>
+                     <input type="text" name="fname">
+                  </li>
+                  <li>
+                     <label>Last Name: </label>
+                     <input type="text" name="lname">
+                  </li>
+                  <li>
+                     <label>Email: </label>
+                     <input type="email" name="email">
+                  </li>
+                  <li id="button">
+                     <input type="submit"name="submit">
+                  </li>
+               </ul>
+            </form>
+         </div>
+      </main>
    </body>
 </html>
