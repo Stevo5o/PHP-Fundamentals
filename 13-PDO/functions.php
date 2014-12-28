@@ -37,10 +37,10 @@ function get($tableName, $conn) {
    }
 }
 
-function insert($tableName, $conn) {
-   try {
-      $result = $conn->query("INSERT INTO register (first_name)VALUES('fran')");
-   } catch (Exception $ex) {
-
-   }
-}
+//function insert($tableName, $conn) {
+//   try {
+//      $result = $conn->query("INSERT INTO register (first_name)VALUES('fran')");
+//   } catch (Exception $ex) {
+//
+//   }
+//}

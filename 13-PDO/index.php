@@ -32,8 +32,6 @@ if ($conn) {
             } else {
                echo 'no rows';
             }
-
-            //   $conn->query("INSERT INTO users (first_name)VALUES('fran')");
             ?>
             <form method="post" action="process.php">
                <ul>
@@ -50,7 +48,7 @@ if ($conn) {
                      <input type="email" name="email">
                   </li>
                   <li id="button">
-                     <input type="submit"name="submit">
+                     <input type="submit" name="submit">
                   </li>
                </ul>
             </form>
