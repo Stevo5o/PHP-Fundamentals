@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Blog\DB;
 
@@ -18,29 +18,18 @@ function connect($config) {
    }
 }
 
-function query($query, $bindings, $conn) 
-{
-	$stmt = $conn->prepare($query);
-	$stmt->excute(array($bindings));
-	$stmt->fetchAll();
+function query($query, $bindings, $conn) {
+   $stmt = $conn->prepare($query);
+   $stmt->excute(array($bindings));
+   $stmt->fetchAll();
 }
 
 function get($tableName, $conn) {
    try {
       $result = $conn->query("SELECT * FROM $tableName");
 
-      return ($result->rowCount() > 0)
-      ? $result
-      : false;
+      return ($result->rowCount() > 0) ? $result : false;
    } catch (PDOException $e) {
       echo 'ERROR: ' . $e->getMessage();
    }
 }
-
-//function insert($tableName, $conn) {
-//   try {
-//      $result = $conn->query("INSERT INTO register (first_name)VALUES('fran')");
-//   } catch (Exception $ex) {
-//
-//   }
-//}
