@@ -37,15 +37,15 @@ if ($conn) {
                <ul>
                   <li>
                      <label>First Name: </label>
-                     <input type="text" name="fname">
+                     <input type="text" name="fname" >
                   </li>
                   <li>
                      <label>Last Name: </label>
-                     <input type="text" name="lname">
+                     <input type="text" name="lname" required>
                   </li>
                   <li>
                      <label>Email: </label>
-                     <input type="email" name="email">
+                     <input type="email" name="email" required>
                   </li>
                   <li id="button">
                      <input type="submit" name="submit">
