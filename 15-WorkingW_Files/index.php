@@ -3,13 +3,9 @@
 function set_count($file_name = 'counter.txt')
 {
     if (file_exists($file_name)) {
-        $handle = fopen($file_name, 'r');
-        $count = (int) fread($handle, 20) + 1;
-
-        $handle = fopen($file_name, 'w');
-        fwrite($handle, $count);
-
-
+        $count = file_get_contents($file_name) + 1;
+        file_put_contents($file_name, $count);
+//        print_r(file($file_name)); // returns an array
     } else {
         // create file
         $handle = fopen($file_name, 'w+');
@@ -17,13 +13,11 @@ function set_count($file_name = 'counter.txt')
 
         // set a default value
         fwrite($handle, $count);
-
         fclose($handle);
     }
     return $count;
 }
 
-echo set_count();
-die();
+$count = set_count();
 
 require 'index.tmpl.php';

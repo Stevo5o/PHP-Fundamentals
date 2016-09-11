@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>The Games of Thrones Fan Website</h1>
-    <p>This is sites a x amount of visits</p>
+    <p>Counted <?php echo $count ?> visits</p>
 
 </body>
 </html>
