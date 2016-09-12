@@ -20,4 +20,29 @@ function set_count($file_name = 'counter.txt')
 
 $count = set_count();
 
+$files = glob('c*.txt');
+$filesExt = glob('img/*.{png,jpg,jpeg,csv}', GLOB_BRACE);
+
+function get_ext($filesExt)
+{
+    foreach ($filesExt as $ext) {
+        echo "<pre>";
+        echo substr($ext, -3);
+        echo "</pre>";
+    }
+}
+
+$charList = file_get_contents('img/GotCharacterList.csv');
+
+function get_images()
+{
+    $dirName = "img/";
+    $images = glob($dirName . "*.{png,jpg}", GLOB_BRACE);
+    foreach ($images as $image) {
+        echo '<img src="' . $image . '" />';
+    }
+    return $images;
+}
+
 require 'index.tmpl.php';
+
